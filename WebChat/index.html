@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8" />
+<title>My Activity</title>
+<link rel="stylesheet" media="not screen and (device-width: 1200px) and (device-height: 900px)"
+      href="lib/sugar-web/graphics/css/sugar.css">
+<link rel="stylesheet" media="screen and (device-width: 1200px) and (device-height: 900px)"
+      href="lib/sugar-web/graphics/css/sugar.css">
+<link rel="stylesheet" href="css/activity.css">
+<style>
+    /* * { font-family:tahoma; font-size:12px; padding:0px; margin:0px; }
+        p { line-height:18px; }*/
+        #division { width:500px; margin-left:auto; margin-right:auto;}
+        #content { padding:5px; background:#ddd; border-radius:5px; overflow-y: scroll;
+                   border:1px solid #CCC; margin-top:10px; height: 160px; }
+        #input { border-radius:2px; border:1px solid #ccc;
+                 margin-top:10px; padding:5px; width:400px;  }
+        #status { width:88px; display:block; float:left; margin-top:15px; }
+</style>
+<script data-main="js/loader" src="lib/require.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="lib/chat-server.js"></script>
+
+</head>
+
+<body>
+<div id="main-toolbar" class="toolbar">
+  <button class="toolbutton" id="activity-button" title="My Activity"></button>
+
+  <!-- Add more buttons here -->
+
+  <!-- Buttons with class="pull-right" will be right aligned -->
+  <button class="toolbutton pull-right" id="stop-button" title="Stop"></button>
+</div>
+
+<!-- The content of your activity goes inside the canvas -->
+<div id="canvas">
+
+  <!-- Replace this message with your own content -->
+          <div id="content"></div>
+        <div id = "division">
+            <span id="status">Connecting...</span>
+            <input type="text" id="input" disabled="disabled" />
+            <button id="stop">Disconnect </button>
+        </div>
+</div>
+</body>
+
+</html>
